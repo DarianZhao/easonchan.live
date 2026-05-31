@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陈奕迅 · Eason Chan — 歌迷站</title>
+<meta name="description" content="陈奕迅 Eason Chan 歌迷站。经典歌曲、歌词、演唱会记忆。">
+<style>
+  :root {
+    --bg: #0d0d14;
+    --card: #151520;
+    --border: #222235;
+    --text: #e0e0ea;
+    --muted: #6e6e88;
+    --gold: #c9a84c;
+    --gold-light: #e8d48b;
+    --accent: #8b5cf6;
+    --red: #dc2626;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "PingFang SC", "Noto Serif SC", "Songti SC", Georgia, serif;
+    line-height: 1.9;
+    min-height: 100vh;
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 100px 24px 80px;
+    background: linear-gradient(180deg, rgba(201,168,76,0.06) 0%, transparent 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero .mic { font-size: 56px; margin-bottom: 20px; display:block; }
+  .hero h1 {
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light), #f5e6b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  .hero .en {
+    font-size: 18px;
+    color: var(--muted);
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+  .hero .tagline {
+    color: var(--muted);
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Section headers */
+  .section-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--gold);
+    margin: 60px 0 24px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  /* Quote block */
+  .quote-block {
+    text-align: center;
+    padding: 48px 24px;
+    margin: 40px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .quote-block .lyric {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--gold-light);
+    line-height: 2;
+    margin-bottom: 8px;
+  }
+  .quote-block .song {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+
+  /* Song grid */
+  .song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+    margin: 24px 0;
+  }
+  .song-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.2s;
+  }
+  .song-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .song-card .name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .song-card .year {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Fan note */
+  .fan-note {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px;
+    margin: 40px 0;
+    line-height: 2;
+  }
+  .fan-note .greeting {
+    font-size: 20px;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .fan-note p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  /* Concert */
+  .concert {
+    background: linear-gradient(135deg, rgba(220,38,38,0.08), rgba(139,92,246,0.08));
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    margin: 24px 0;
+    text-align: center;
+  }
+  .concert .emoji { font-size: 36px; margin-bottom: 10px; }
+  .concert h3 { font-size: 18px; margin-bottom: 6px; }
+  .concert p { color: var(--muted); font-size: 14px; }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 60px 24px;
+    margin-top: 60px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <span class="mic">🎤</span>
+  <h1>陈奕迅</h1>
+  <p class="en">E A S O N · C H A N</p>
+  <p class="tagline">感谢永远有歌 把心境道破</p>
+</section>
+
+<div class="container">
+
+  <div class="quote-block">
+    <p class="lyric">"何不把悲哀感觉 假设是来自你虚构"</p>
+    <p class="song">—— 《富士山下》</p>
+  </div>
+
+  <h2 class="section-title">▸ 经典作品</h2>
+  <div class="song-grid">
+    <div class="song-card"><div class="name">十年</div><div class="year">2003</div></div>
+    <div class="song-card"><div class="name">富士山下</div><div class="year">2006</div></div>
+    <div class="song-card"><div class="name">浮夸</div><div class="year">2005</div></div>
+    <div class="song-card"><div class="name">好久不见</div><div class="year">2007</div></div>
+    <div class="song-card"><div class="name">爱情转移</div><div class="year">2007</div></div>
+    <div class="song-card"><div class="name">单车</div><div class="year">2001</div></div>
+    <div class="song-card"><div class="name">K歌之王</div><div class="year">2000</div></div>
+    <div class="song-card"><div class="name">淘汰</div><div class="year">2007</div></div>
+    <div class="song-card"><div class="name">红玫瑰</div><div class="year">2007</div></div>
+    <div class="song-card"><div class="name">最佳损友</div><div class="year">2006</div></div>
+    <div class="song-card"><div class="name">明年今日</div><div class="year">2002</div></div>
+    <div class="song-card"><div class="name">沙龙</div><div class="year">2009</div></div>
+    <div class="song-card"><div class="name">苦瓜</div><div class="year">2011</div></div>
+    <div class="song-card"><div class="name">陀飞轮</div><div class="year">2010</div></div>
+    <div class="song-card"><div class="name">任我行</div><div class="year">2013</div></div>
+    <div class="song-card"><div class="name">葡萄成熟时</div><div class="year">2005</div></div>
+  </div>
+
+  <div class="quote-block">
+    <p class="lyric">"要是彼此都有些既定路程 学会洒脱好吗"</p>
+    <p class="song">—— 《落花流水》</p>
+  </div>
+
+  <div class="fan-note">
+    <div class="greeting">🎧 一个歌迷的话</div>
+    <p>听陈奕迅已经很多很多年了。从学生时代到如今做外贸走南闯北，耳机里放的最多的始终是他的歌。</p>
+    <p>也去听过现场。那种全场一起合唱的感觉——不是说演唱会多炫目，而是他的声音一出来，你就知道那些歌词里写的全部都是真的。</p>
+    <p>林夕说他把三千首歌的灵魂都给了陈奕迅。我觉得不止，Eason 给了我们这些听歌的人一个安放情绪的地方。难过的时候听《富士山下》，想家的时候听《单车》，觉得撑不住的时候听《任我行》——他的声音总能告诉你，没事的。</p>
+    <p>建这个小站，不为别的。就是想有个地方，安安静静地放着这些歌名、这些歌词。像老朋友一样。</p>
+  </div>
+
+  <div class="concert">
+    <div class="emoji">🎫</div>
+    <h3>演唱会记忆</h3>
+    <p>曾经在现场，和大家一起唱到声音沙哑。</p>
+    <p style="margin-top:6px;">那晚的灯光、那晚的 Encore、那晚的《明年今日》——永远不会忘记。</p>
+  </div>
+
+  <div class="quote-block">
+    <p class="lyric">"路 始终都要走 让时间 去化解 一切荒谬"</p>
+    <p class="song">—— 《任我行》</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>easonchan.live · 歌迷站</p>
+  <p style="font-size:12px;">致敬陈奕迅 · 致敬那些被歌唱出的岁月</p>
+  <p style="margin-top:8px;"><a href="http://darianzhao.com">Darian Zhao</a></p>
+</footer>
+
+</body>
+</html>
